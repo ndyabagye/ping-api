@@ -7,9 +7,9 @@ namespace Database\Seeders;
 use App\Models\Check;
 use App\Models\Service;
 use App\Models\User;
-
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 final class DatabaseSeeder extends Seeder
 {

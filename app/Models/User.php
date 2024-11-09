@@ -18,7 +18,6 @@ final class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
 
-    public mixed $id;
 
     /**
      * @var array<int,string>
