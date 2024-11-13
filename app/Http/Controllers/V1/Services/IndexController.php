@@ -23,24 +23,25 @@ final class IndexController
                 column: 'user_id',
                 operator: '=',
                 value: auth()->id()
-            )->get(),
+            )->pluck('id')->toArray(),
         );
 
-
         $services = QueryBuilder::for(
-            subject: $cachedServices,
+            subject: Service::query()->whereIn(
+                column: 'id',
+                values: $cachedServices,
+            ),
+        )->allowedIncludes(
+            includes: [
+                'checks',
+            ]
         )->allowedFilters(
             filters: [
                 'url',
             ]
-        )->allowedIncludes(
-            includes: [
-                'checks'
-            ]
-        )->getEloquentBuilder()
-            ->simplePaginate(
-                perPage: config('app.pagination.limit')
-            );
+        )->getEloquentBuilder()->simplePaginate(
+            perPage: config('app.pagination.limit')
+        );
 
         return new JsonResponse(
             data: ServiceResource::collection(

@@ -35,10 +35,10 @@ return Application::configure(basePath: dirname(__DIR__))
             PermissionsPolicy::class,
             ContentTypeOptions::class,
             CertificateTransparencyPolicy::class,
+            TreblleMiddleware::class
         ]);
 
         $middleware->alias([
-            'treblle' => TreblleMiddleware::class,
             'sunset' => App\Http\Middleware\SunsetMiddleware::class,
             'verified' => App\Http\Middleware\EnsureEmailIsVerified::class,
         ]);

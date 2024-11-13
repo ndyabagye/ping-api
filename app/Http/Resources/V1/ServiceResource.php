@@ -28,7 +28,7 @@ final class ServiceResource extends JsonApiResource
     public function toLinks(Request $request): array
     {
         return [
-            Link::self(route('v1servicesshow', $this->resource)),
+            Link::self(route('v1:services:show', $this->resource)),
         ];
     }
 
