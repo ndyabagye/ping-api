@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Throwable;
 use Treblle\ApiResponses\Data\ApiError;
@@ -40,6 +41,16 @@ final class ErrorFactory
                     link: 'https://docs.treblle.com/errors/405'
                 ),
                 status: Status::METHOD_NOT_ALLOWED,
+            ),
+            UnauthorizedHttpException::class => new ErrorResponse(
+                data: new ApiError(
+                    title: 'Unauthorized',
+                    detail: 'You are not authorized to access this resource.',
+                    instance: $request->fullUrl(),
+                    code: 'HTTP-401',
+                    link: 'https://docs.treblle.com/errors/401'
+                ),
+                status: Status::UNAUTHORIZED,
             ),
 
             default => new ErrorResponse(
