@@ -11,9 +11,12 @@
         "laravel/tinker": "^2.10",
         "predis/predis": "^2.2",
         "spatie/laravel-query-builder": "^6.2",
+        "spatie/laravel-responsecache": "^7.6",
         "timacdonald/json-api": "v1.0.0-beta.7",
         "treblle/api-responses": "^0.0.2",
-        "treblle/error-codes": "^0.0.1"
+        "treblle/error-codes": "^0.0.1",
+        "treblle/security-headers": "*",
+        "treblle/treblle-laravel": "^4.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23.1",

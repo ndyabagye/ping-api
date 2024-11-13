@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4f2d883f45f23d5973f624abc4cdc5b",
+    "content-hash": "351c9c520fa881cfd9a58cb83d47bc24",
     "packages": [
         {
             "name": "brick/math",
@@ -3515,6 +3515,89 @@
             "time": "2024-10-03T11:10:10+00:00"
         },
         {
+            "name": "spatie/laravel-responsecache",
+            "version": "7.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-responsecache.git",
+                "reference": "ccaf6fd941e86ea08197b787864bec4a01f658e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/ccaf6fd941e86ea08197b787864bec4a01f658e0",
+                "reference": "ccaf6fd941e86ea08197b787864bec4a01f658e0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "^10.0|^11.0",
+                "illuminate/console": "^10.0|^11.0",
+                "illuminate/container": "^10.0|^11.0",
+                "illuminate/http": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "nesbot/carbon": "^2.63|^3.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.9"
+            },
+            "require-dev": {
+                "laravel/framework": "^10.0|^11.0",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^8.0|^9.0",
+                "pestphp/pest": "^2.22"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ResponseCache\\ResponseCacheServiceProvider"
+                    ],
+                    "aliases": {
+                        "ResponseCache": "Spatie\\ResponseCache\\Facades\\ResponseCache"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponseCache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Speed up a Laravel application by caching the entire response",
+            "homepage": "https://github.com/spatie/laravel-responsecache",
+            "keywords": [
+                "cache",
+                "laravel",
+                "laravel-responsecache",
+                "performance",
+                "response",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-responsecache/tree/7.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-08-05T09:57:46+00:00"
+        },
+        {
             "name": "symfony/clock",
             "version": "v7.1.6",
             "source": {
@@ -5959,6 +6042,199 @@
                 "source": "https://github.com/Treblle/error-codes/tree/0.0.1"
             },
             "time": "2023-08-25T10:16:35+00:00"
+        },
+        {
+            "name": "treblle/security-headers",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Treblle/security-headers.git",
+                "reference": "f03729aa31e9f86eb28f839946df2b4e319a0c02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Treblle/security-headers/zipball/f03729aa31e9f86eb28f839946df2b4e319a0c02",
+                "reference": "f03729aa31e9f86eb28f839946df2b4e319a0c02",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10",
+                "orchestra/testbench": "^8.5.2",
+                "pestphp/pest": "^2.6.1",
+                "phpstan/phpstan": "^1.10.15"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Treblle\\SecurityHeaders\\Providers\\PackageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Treblle\\SecurityHeaders\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve McDougall",
+                    "email": "juststevemcd@gmail.com",
+                    "homepage": "https://www.juststeveking.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A collection of HTTP middleware classes to improve the security headers in your Laravel application.",
+            "homepage": "https://www.treblle.com/",
+            "keywords": [
+                "api",
+                "debuging",
+                "documentation",
+                "laravel",
+                "monitoring",
+                "treblle"
+            ],
+            "support": {
+                "issues": "https://github.com/Treblle/security-headers/issues",
+                "source": "https://github.com/Treblle/security-headers/tree/0.0.3"
+            },
+            "time": "2023-06-05T09:40:40+00:00"
+        },
+        {
+            "name": "treblle/treblle-laravel",
+            "version": "4.6.43",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Treblle/treblle-laravel.git",
+                "reference": "a889649f705291e21204517d32195763f3b532f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Treblle/treblle-laravel/zipball/a889649f705291e21204517d32195763f3b532f5",
+                "reference": "a889649f705291e21204517d32195763f3b532f5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^8.1",
+                "treblle/utils": "^0.4.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.7.0",
+                "laravel/octane": "^1.5.6",
+                "laravel/pint": "^1.10.3",
+                "orchestra/testbench": "^7.0 || ^8.5.9",
+                "phpstan/phpstan": "^1.10.25"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Treblle\\TreblleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Treblle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vedran Cindrić",
+                    "email": "vedran@treblle.com",
+                    "homepage": "https://treblle.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Steve McDougall",
+                    "email": "juststevemcd@gmail.com",
+                    "homepage": "https://treblle.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Stay in tune with your APIs",
+            "homepage": "https://treblle.com/",
+            "keywords": [
+                "api",
+                "debuging",
+                "documentation",
+                "laravel",
+                "monitoring",
+                "treblle"
+            ],
+            "support": {
+                "issues": "https://github.com/Treblle/treblle-laravel/issues",
+                "source": "https://github.com/Treblle/treblle-laravel/tree/4.6.43"
+            },
+            "time": "2024-10-11T12:17:27+00:00"
+        },
+        {
+            "name": "treblle/utils",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Treblle/php-utils.git",
+                "reference": "8a8d837170acf3fff7b02be18f502f11fc2b36e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Treblle/php-utils/zipball/8a8d837170acf3fff7b02be18f502f11fc2b36e5",
+                "reference": "8a8d837170acf3fff7b02be18f502f11fc2b36e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.7",
+                "pestphp/pest": "^v2.8.2",
+                "phpstan/phpstan": "^1.10.25"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Treblle\\Utils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve McDougall",
+                    "email": "juststevemcd@gmail.com",
+                    "homepage": "https://www.juststeveking.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Treblle PHP SDK utilities.",
+            "homepage": "https://www.treblle.com/",
+            "keywords": [
+                "api",
+                "debuging",
+                "documentation",
+                "laravel",
+                "monitoring",
+                "treblle"
+            ],
+            "support": {
+                "issues": "https://github.com/Treblle/php-utils/issues",
+                "source": "https://github.com/Treblle/php-utils/tree/0.4.0"
+            },
+            "time": "2024-09-26T11:45:45+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
