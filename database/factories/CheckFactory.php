@@ -26,7 +26,7 @@ final class CheckFactory extends Factory
             'body' => null,
             'headers' => null,
             'parameters' => null,
-            'credential_id' => $this->faker->boolean
+            'credential_id' => $this->faker->boolean()
                 ? Credential::factory()
                 : null,
             'service_id' => Service::factory(),
